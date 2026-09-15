@@ -1,0 +1,25 @@
+/* Contenedor 3D */
+.card-scene {
+  perspective: 1000px;
+}
+
+.card-object {
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+/* Giro simultáneo en eje horizontal (X) y vertical (Y) */
+.card-scene:hover .card-object {
+  transform: rotateX(180deg) rotateY(180deg);
+}
+
+/* Ocultar la cara opuesta */
+.face-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Compensación para que la cara trasera quede al derecho tras el doble giro */
+.card-back {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
