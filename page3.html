@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plantas - page</title>
+
+    <!-- CSS ya compilado por Tailwind (npm run build) -->
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+
+  <body class="bg-white">
+    <!-- ============================================================
+       FRANJA DE DESCUENTO (la tirita verde olivo de arriba de todo)
+       ============================================================ -->
+    <div
+      class="bg-[#6b6b32] text-white text-sm flex items-center justify-center gap-4 py-2 px-4"
+    >
+      <span>-15% en la primera compra</span>
+      <button
+        class="bg-white text-[#3d3d1c] text-xs font-medium px-3 py-1 rounded hover:bg-gray-100"
+      >
+        Registrarse
+      </button>
+    </div>
+
+    <!-- ============================================================
+       MENÚ PRINCIPAL (fondo negro, links a la izquierda,
+       cuenta / buscar / carrito a la derecha)
+       ============================================================ -->
+    <nav
+      class="bg-black text-white px-6 py-4 flex flex-wrap items-center justify-between gap-4"
+    >
+      <ul class="flex flex-wrap gap-6 text-sm">
+        <li><a href="#" class="text-orange-500 font-medium">Plantas</a></li>
+        <li><a href="#" class="hover:text-gray-300">Macetas</a></li>
+        <li><a href="#" class="hover:text-gray-300">Oferta</a></li>
+        <li><a href="#" class="hover:text-gray-300">Suscripciones</a></li>
+        <li><a href="#" class="hover:text-gray-300">Cuidado</a></li>
+      </ul>
+
+      <div class="flex items-center gap-4 text-sm">
+        <button
+          class="flex items-center gap-2 border border-white rounded-full px-4 py-1.5 hover:bg-white hover:text-black transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.25a7.5 7.5 0 0115 0"
+            />
+          </svg>
+          Entrar
+        </button>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5 cursor-pointer"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21 21l-4.35-4.35m1.35-5.15a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"
+          />
+        </svg>
+
+        <span class="flex items-center gap-1 cursor-pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.25 3h1.386c.51 0 .955.343 1.087.836l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 1.914-4.706 2.353-7.152a1.125 1.125 0 00-1.11-1.318H5.106M7.5 14.25L5.106 5.106M9.75 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm7.5 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+            />
+          </svg>
+          Carrito 0
+        </span>
+      </div>
+    </nav>
+
+    <!-- ============================================================
+       SECCIÓN HERO
+       ============================================================ -->
+    <section
+      class="bg-black h-[280px] sm:h-[340px] md:h-[400px] flex items-center justify-center"
+    >
+      <h1 class="text-white font-serif text-5xl sm:text-6xl">Plantas</h1>
+    </section>
+
+    <!-- ============================================================
+       "RECIÉN LLEGADOS"
+       ============================================================ -->
+    <section class="bg-stone-200 px-6 py-12">
+      <div
+        class="flex flex-wrap items-center justify-between gap-4 max-w-6xl mx-auto mb-8"
+      >
+        <h2 class="font-serif text-4xl text-stone-900">Recién llegados</h2>
+        <button
+          class="bg-orange-700 text-white px-5 py-2.5 rounded hover:bg-orange-800 transition"
+        >
+          Comprar todo
+        </button>
+      </div>
+
+      <div class="flex flex-wrap gap-4 max-w-6xl mx-auto justify-center">
+        <!-- Tarjeta 1: Ficus lyrata -->
+        <article class="tarjeta-producto bg-stone-100 rounded overflow-hidden">
+          <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-[#6b6b32] text-white text-[10px] uppercase tracking-wide px-2 py-1 rounded"
+            >
+              Recién llegado
+            </span>
+            <img
+              src="img/ficus.jpg"
+              alt="Ficus lyrata"
+              class="foto-producto w-full h-56 object-cover"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="text-stone-900 font-medium">Ficus lyrata</h3>
+            <p class="text-stone-700 mb-3">$699.99</p>
+            <button
+              class="w-full border border-stone-400 rounded py-2 text-sm hover:bg-stone-200 transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+
+        <!-- Tarjeta 2: Maceta oxidada -->
+        <article class="tarjeta-producto bg-stone-100 rounded overflow-hidden">
+          <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-[#6b6b32] text-white text-[10px] uppercase tracking-wide px-2 py-1 rounded"
+            >
+              Recién llegado
+            </span>
+            <img
+              src="img/oxidado.jpg"
+              alt="Maceta oxidada"
+              class="foto-producto w-full h-56 object-cover"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="text-stone-900 font-medium">Maceta oxidada</h3>
+            <p class="text-stone-700 mb-3">$399.99</p>
+            <button
+              class="w-full border border-stone-400 rounded py-2 text-sm hover:bg-stone-200 transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+
+        <!-- Tarjeta 3: Cactus -->
+        <article class="tarjeta-producto bg-stone-100 rounded overflow-hidden">
+          <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-[#6b6b32] text-white text-[10px] uppercase tracking-wide px-2 py-1 rounded"
+            >
+              Recién llegado
+            </span>
+            <img
+              src="img/cactus.jpg"
+              alt="Cactus"
+              class="foto-producto w-full h-56 object-cover"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="text-stone-900 font-medium">Cactus</h3>
+            <p class="text-stone-700 mb-3">$399.99</p>
+            <button
+              class="w-full border border-stone-400 rounded py-2 text-sm hover:bg-stone-200 transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+
+        <!-- Tarjeta 4: Cesto de madera -->
+        <article class="tarjeta-producto bg-stone-100 rounded overflow-hidden">
+          <div class="relative">
+            <span
+              class="absolute top-2 left-2 bg-[#6b6b32] text-white text-[10px] uppercase tracking-wide px-2 py-1 rounded"
+            >
+              Recién llegado
+            </span>
+            <img
+              src="img/madera.jpg"
+              alt="Cesto de madera"
+              class="foto-producto w-full h-56 object-cover"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="text-stone-900 font-medium">Cesto de madera</h3>
+            <p class="text-stone-700 mb-3">$559.99</p>
+            <button
+              class="w-full border border-stone-400 rounded py-2 text-sm hover:bg-stone-200 transition"
+            >
+              Agregar al carrito
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       PIE DE PÁGINA
+       ============================================================ -->
+    <footer class="bg-black text-gray-300 px-6 py-12">
+      <div class="flex flex-wrap gap-10 max-w-6xl mx-auto justify-between">
+        <div>
+          <h4 class="text-white font-medium mb-3">Contacto</h4>
+          <p class="text-sm leading-relaxed">
+            Dirección: Av. Fray A. Alcalde 10 44100<br />
+            Guadalajara, Jal, México<br />
+            Tel: +52-1-33-12345678<br />
+            Email: info@misitio.com
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-3">Tienda</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-white">Comprar todo</a></li>
+            <li><a href="#" class="hover:text-white">Plantas</a></li>
+            <li><a href="#" class="hover:text-white">Macetas</a></li>
+            <li><a href="#" class="hover:text-white">Oferta</a></li>
+            <li><a href="#" class="hover:text-white">Suscripciones</a></li>
+            <li><a href="#" class="hover:text-white">Cuidado</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-3">Enlaces útiles</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-white">FAQ</a></li>
+            <li>
+              <a href="#" class="hover:text-white">Envío y devoluciones</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-white">Términos y condiciones</a>
+            </li>
+            <li><a href="#" class="hover:text-white">Métodos de pago</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-3">Empresa</h4>
+          <ul class="text-sm space-y-2">
+            <li><a href="#" class="hover:text-white">Nosotros</a></li>
+            <li><a href="#" class="hover:text-white">Contáctanos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-medium mb-3">Horarios</h4>
+          <p class="text-sm leading-relaxed">
+            Lun - Vie: 7:00 - 22:00<br />
+            Sábado: 8:00 - 22:00<br />
+            Domingo: 8:00 - 35:00
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="max-w-6xl mx-auto border-t border-gray-700 mt-10 pt-4 text-xs text-gray-500"
+      >
+        © 2035 Creado por Equipo Perez-Sosa
+      </div>
+    </footer>
+
+    <!-- ============================================================
+       BOTÓN FLOTANTE DE CHAT
+       ============================================================ -->
+    <button
+      class="fixed bottom-6 right-6 bg-green-800 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8-1.06 0-2.076-.163-3.017-.463L3 21l1.395-3.72C3.512 16.042 3 14.574 3 13c0-4.418 4.03-8 9-8s9 3.582 9 7z"
+        />
+      </svg>
+    </button>
+  </body>
+</html>
