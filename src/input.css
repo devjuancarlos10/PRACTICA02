@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------------------
+   Este pedacito es CSS normal, hecho a mano, porque Tailwind no
+   trae por defecto un "hover que sube la opacidad en 15%".
+   La idea: la imagen se ve un poco transparente (85%) en reposo,
+   y cuando el mouse pasa por encima, sube a 100% (85% + 15%).
+   -------------------------------------------------------------- */
+.foto-producto {
+  opacity: 0.85;
+  transition: opacity 0.25s ease-in-out;
+}
+.foto-producto:hover {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------
+   Media queries pedidas por el profesor. Usamos flexbox como
+   base (ver clases "flex" y "flex-wrap" en el HTML) y aquí solo
+   ajustamos cuántas tarjetas entran por fila según el ancho de
+   pantalla. Así se nota clarito el uso de media queries de verdad,
+   no solo los prefijos de Tailwind.
+   -------------------------------------------------------------- */
+
+/* Pantallas chicas: menos de 480px -> una tarjeta por fila */
+@media (max-width: 479px) {
+  .tarjeta-producto {
+    width: 100%;
+  }
+}
+
+/* Pantallas medianas: entre 480px y 899px -> dos tarjetas por fila */
+@media (min-width: 480px) and (max-width: 899px) {
+  .tarjeta-producto {
+    width: calc(50% - 12px);
+  }
+}
+
+/* Pantallas grandes: entre 900px y 1199px -> tres tarjetas por fila */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .tarjeta-producto {
+    width: calc(33.333% - 16px);
+  }
+}
+
+/* Pantallas extra grandes: 1200px a más -> las cuatro en una sola fila */
+@media (min-width: 1200px) {
+  .tarjeta-producto {
+    width: calc(25% - 18px);
+  }
+}
